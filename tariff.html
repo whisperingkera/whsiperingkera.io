@@ -1,0 +1,563 @@
+{% extends 'base.html'%}
+{% block title%}Tariff{% endblock %}
+{% load static%}
+{% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /*----------------------------------
+Table of contents
+----------------------------------*/
+/*
+1) variable
+2) mixin
+3) button
+4) base
+5) color
+6) header
+7) mega-menu
+8) footer
+9) banner
+10) title
+11) effect
+12) feature-box
+13) video
+14) portfolio
+15) process-bar
+16) testimonial
+17) team
+18) client
+19) accordion
+20) price-table
+21) blog
+22) social
+23) form
+24) list
+25) space
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+
+.h4,
+h4 {
+  font-size: 26px; }
+  @media (max-width: 767px) {
+    .h4,
+    h4 {
+      font-size: 22px; } }
+
+.h5,
+h5 {
+  font-size: 20px; }
+
+.section-title h3 {
+  font-weight: 700;
+  font-size: 35px;
+  margin: 0 0 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  z-index: 1;
+  padding: 0 0 10px; }
+  .section-title h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 2px;
+    z-index: -1;
+    background: #d9832e;
+    width: 50px; }
+.section-title p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 2px; }
+
+
+
+/* ----------------------
+*	Section
+-------------------------*/
+.container-large {
+  max-width: 1440px; }
+
+.container-small {
+  max-width: 750px; }
+
+.section {
+  padding: 100px 0; }
+  @media (max-width: 991px) {
+    .section {
+      padding-top: 80px;
+      padding-bottom: 80px; } }
+  @media (max-width: 767px) {
+    .section {
+      padding-top: 60px;
+      padding-bottom: 60px; } }
+
+.section-top-up .container {
+  margin-top: -190px;
+  position: relative;
+  z-index: 1; }
+
+.section-top-up-100 .container {
+  margin-top: -100px;
+  position: relative;
+  z-index: 1; }
+
+/* ----------------------
+*	Box shadow
+---------------------------*/
+.box-shadow-lg {
+  box-shadow: 0px 30px 60px 0px rgba(208, 212, 219, 0.1); }
+
+.box-shadow {
+  box-shadow: 0px 3px 10px 0px rgba(255, 249, 249, 0.1); }
+
+.box-shadow-hover {
+  box-shadow: 0px 3px 10px 0px rgba(210, 214, 221, 0.1); }
+  .box-shadow-hover:hover {
+    box-shadow: 0px 30px 60px 0px rgba(229, 232, 238, 0.1); }
+
+.box-shadow-only-hover:hover {
+  box-shadow: 0px 30px 60px 0px rgba(227, 231, 237, 0.1); }
+
+/* fun
+------------------*/
+.feature-box-2 {
+  padding: 18px 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 2px solid #e11a8e;
+  box-shadow: 0px 30px 60px 0px rgba(38, 59, 94, 0.1);
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s; }
+  .feature-box-2 .icon {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #e11a8e; }
+  .feature-box-2 h5 {
+    margin: 0;
+    font-size: 16px;
+    color: #090a0c; }
+  .feature-box-2:hover {
+    background: #ffffff; }
+    .feature-box-2:hover .icon {
+      color: #e11a8e; }
+    .feature-box-2:hover h5 {
+      color: #090a0c; }
+
+/* Services
+------------------*/
+.feature-box-1 {
+  padding: 40px 30px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  position: relative;
+  top: 0;
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s; }
+  .feature-box-1 .icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px dotted #e11a8e;
+    color: #e11a8e;
+    font-size: 32px;
+    margin-bottom: 22px; }
+  .feature-box-1 h5 {
+    color: #090a0c;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 12px; }
+  .feature-box-1 p {
+    margin: 0; }
+  .feature-box-1:hover {
+    background: #e11a8e;
+    border-color: #e11a8e;
+    top: -10px; }
+    .feature-box-1:hover .icon {
+      border-color: #ffffff;
+      color: #ffffff; }
+    .feature-box-1:hover h5 {
+      color: #ffffff; }
+    .feature-box-1:hover p {
+      color: rgba(255, 255, 255, 0.6); }
+
+.myp{
+  padding-bottom: 25px;
+}
+.pd{
+  padding-top: 25px;
+  
+}
+.img{
+      width: 50%;
+      float: left;
+            
+    }
+  
+    
+    .myimg1{
+      width: 40%;
+      height: 40%;
+      margin-top: 15px;
+      float: left;
+      padding: 10px;
+      margin:30px;
+      padding-bottom: 15px;
+    }
+    
+    img {
+  max-width: 100%; }
+
+
+/* Portfolio
+------------------*/
+.portfolio-content {
+  margin-left: -10px;
+  shape-margin: -10px; }
+  .portfolio-content .grid-item {
+    padding: 10px;
+    width: calc(100% / 3);
+    float: left; }
+    @media (max-width: 991px) {
+      .portfolio-content .grid-item {
+        width: calc(100% / 2); } }
+    @media (max-width: 567px) {
+      .portfolio-content .grid-item {
+        width: 100%; } }
+
+.portfolio-box-01 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px; }
+  .portfolio-box-01 .link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .portfolio-box-01 img {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s; }
+  .portfolio-box-01 .portfolio-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 10, 12, 0.5);
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s;
+    opacity: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .portfolio-box-01 .portfolio-info h5 {
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: 600;
+      display: inline-block;
+      margin: 0 0 10px;
+      position: relative;
+      -moz-transition: ease all 0.35s;
+      -o-transition: ease all 0.35s;
+      -webkit-transition: ease all 0.35s;
+      transition: ease all 0.35s;
+      left: -25px; }
+      @media (max-width: 991px) {
+        .portfolio-box-01 .portfolio-info h5 {
+          font-size: 20px; } }
+    .portfolio-box-01 .portfolio-info span {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      padding: 2px 12px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      -moz-transition: ease all 0.35s;
+      -o-transition: ease all 0.35s;
+      -webkit-transition: ease all 0.35s;
+      transition: ease all 0.35s;
+      position: relative;
+      left: -25px; }
+  .portfolio-box-01:hover .portfolio-info {
+    opacity: 1; }
+    .portfolio-box-01:hover .portfolio-info h5 {
+      left: 0; }
+    .portfolio-box-01:hover .portfolio-info span {
+      left: 0; }
+  .portfolio-box-01:hover img {
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+
+    .myimg{
+      margin-bottom: 80px;
+    }
+   
+/*# sourceMappingURL=master.css.map */
+    </style>
+</head>
+<body>
+    <section id="services" class="section gray-bg">
+        <div class="container">
+            <div class="row sm-m-25px-b m-35px-b">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3 class="dark-color text-uppercase">ROOMS</h3>
+                        <p class="text-uppercase small myp">The usual taxes are not included in the quoted prices and will be added.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- feaure box -->
+                <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="feature-box-1 box-shadow-lg">
+                        
+                        <div class="feature-content">
+                            <h5>1st category (2 bedrooms):</h5>
+                            <p>On the upper floor of the Guesthouse : spacious bedroom with AC and fan, vestibule, renovated private bathroom, large covered balcony.</p>
+                            <ul>
+                              <li>Dec / Jan / Feb: <br>
+                                78 EUR / 6085 INR (double); 64 EUR / 4990 INR (single)</li>
+                              <li>March / April + September / October / November: <br>
+                                64 EUR / 4990 INR (double); 50 EUR / 3900 INR (single)</li>
+                                <li>May / June / July / August: <br>
+                                  49 EUR / 3820 INR (double); 35 EUR / 2730 INR (single)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+                <!-- feaure box -->
+                
+                <!-- / -->
+                <!-- feaure box -->
+                <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="feature-box-1 box-shadow-lg">
+                        
+                        <div class="feature-content">
+                            <h5>2nd category (2 bedrooms):</h5>
+                            <p>Upper floor of the Street House : room with AC and fan, renovated private bathroom.</p>
+                            <br>
+                            
+                            <ul>
+                              <li>Dec / Jan / Feb: <br>
+                                38 EUR / 2965 INR (double); 28 EUR / 2185 INR (single)</li>
+                              <li>March / April + September / October / November: <br>
+                                29 EUR / 2260 (double); 24 EUR / 1870 INR (single)</li>
+                            <li>May / June / July / August: <br>
+                              25 EUR / 1950 INR (double); 20 EUR / 1560 INR (single)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+                <!-- feaure box -->
+                <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="feature-box-1 box-shadow-lg">
+                       
+                        <div class="feature-content">
+                            <ul>
+                              <li>Extra bed: + 20%</li> 
+                              <li>Air conditioning surcharge: 7 Euros / 545 INR per night for 1st category and 4 Euros / 310 INR per night for 3rd category</li> <br>
+                              <li>Laundry surcharge: 7 Euros / 545 INR</li> 
+                              <li>Airport transfer: 20 EUR</li> <br>
+                              <li>Free WIFI</li> <br>
+                              <li>Free parking ,Free Parking</li>
+                              <li>Meals : breakfast 5 Euros / 390 INR, dinner 11 Euros / 860 INR vegetarian, 14 Euros / 1090 INR non vegetarian</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+                <!-- feaure box -->
+                <div class="col-sm-6 col-lg-4-15px-tb pd">
+                    <div class="feature-box-1 box-shadow-lg">
+                        
+                        <div class="feature-content">
+                            <h5 >BOOKING  AND CANCELLATION CONDITIONS</h5>
+                          <ol>
+                            <li>A deposit of 20% of the price of the stay is required for confirmation of the reservation.</li>
+                            <li>Cancellation 30 days before arrival allows the refund of the deposit (minus bank charges).</li>
+                            <li>If cancellation occurs less than 30 days before arrival, the deposit can not be refunded.</li>
+                          </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+                <!-- feaure box -->
+              
+                <!-- / -->
+            </div>
+
+            <div class="container">
+              <div class="portfolio-content lightbox-gallery">
+                  <div class="grid-item product branding">
+                      <div class="portfolio-box-01">
+                          <div class="portfolio-img">
+                              <img src="{% static '/images/fac5.jpg' %}" title="" alt="">
+                          </div>
+                          <div class="portfolio-info">
+                            <h5>BEDROOM</h5>
+                           
+                        </div>
+                          
+                          <a class="link-overlay" href="#"></a>
+                      </div>
+                  </div> <!-- grid item -->
+                  
+                  
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/fac9.jpg' %}" title="" alt="">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BEDROOM</h5>
+                   
+                </div>
+                  
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/fac4.jpg' %}" title="" alt="">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BEDROOM</h5>
+                   
+                </div>
+                  
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/124.jpg' %}" title="" alt="">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BEDROOM</h5>
+                   
+                </div>
+                 
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/fa1.jpg' %}" title="" alt="">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BATHROOM</h5>
+                   
+                </div>
+                  
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/123.jpg' %}" title="" alt="">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BATHROOM</h5>
+                   
+                </div>
+                 
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/fac8.jpg' %}" title="" alt="" class="myimg">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BATHROOM</h5>
+                   
+                </div>
+                 
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            
+            <div class="grid-item product branding">
+              <div class="portfolio-box-01">
+                  <div class="portfolio-img">
+                      <img src="{% static '/images/fac7.jpg' %}" title="" alt="" class="myimg">
+                  </div>
+                  <div class="portfolio-info">
+                    <h5>BATHROOM</h5>
+                   
+                </div>
+                  
+                  <a class="link-overlay" href="#"></a>
+              </div>
+            </div> <!-- grid item -->
+            
+                
+              </div> <!-- portfolio-content -->
+            </div>
+            
+        </div>
+    </section>
+    <!-- End resume -->
+    <!-- Work -->
+
+    
+    
+   
+</body>
+</html>
+{% endblock %}

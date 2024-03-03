@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+   .myimg1{
+      width: 15%;
+      height: 15%;
+      margin-top: 15px;
+      float: left;
+      margin:30px;    
+     
+       
+    }
+    .myimg2{
+      width: 15%;
+      height: 15%;
+      margin-top: 15px;
+      float: left;
+      margin:30px;    
+       margin-bottom: 100px
+     
+   
+      
+      
+    }
+    .myh4{
+        text-align: center;
+        font-family: 'Lucida Sans';
+    }
+    .myh{
+        text-align: center;
+        font-family: 'Gill Sans';
+       
+    }
+    .myp{
+       font-family: 'Trebuchet MS', sans-serif;
+       padding-left: 15px;
+    }
+    
+   
+    </style>
+</head>
+<body>
+
+{% extends 'base.html'%}
+{% block title%}Facilities{% endblock %}
+{% load static%}
+{% block content%}
+ 
+<h1 class="myh">OUR FACILITIES</h1>
+<div >
+    <p class="myp">Kerala electricity is hydraulic power. <br>
+    We use solar power for hot water. <br>
+    We produce our own drinking water to avoid plastic bottles, as well as most of our vegetables and fruits. <br>
+    We have banned plastic bags and seek for the best possible recycling of waste under current conditions in Kerala.</p>
+
+
+<div >
+   <h4 class="myh4">WE OFFER YOU : </h4>
+   <ul>
+    <li>Secure environment</li>
+    <li>Home made cuisine (vegetarian and non vegetarian)</li>
+    <li>Spacious double bed rooms with private bathroom and terrace and, for smaller budgets, 
+        two more simple rooms with private bathroom</li>
+    <li>Free parking</li>
+    <li>Free WiFi</li>
+    <li>Air conditioning & fan</li>
+    <li>Reading lounge</li>
+    <li>Swimming pool</li>
+    <li>Ayurvedic massages (on request)</li>
+    <li>Yoga outdoor space and training (on request)</li>
+    <li>Sight-seeing trips</li>
+    <li>Organized transportation (beach, shopping, dinner)</li>
+    <li>Airport pick-up & drop off</li>
+   </ul>
+
+</div>
+    <div> <img src="{% static '/images/fac1.jpg' %}" alt="" class="myimg1"></div>
+    <div> <img src="{% static '/images/fac2.jpg' %}" alt="" class="myimg1"></div>
+    <div> <img src="{% static '/images/fac3.jpg' %}" alt="" class="myimg1"></div>
+    <div> <img src="{% static '/images/fac4.jpg' %}" alt="" class="myimg1"></div>
+    <div> <img src="{% static '/images/fac5.jpg' %}" alt="" class="myimg1"></div>
+    <div> <img src="{% static '/images/fac7.jpg' %}" alt="" class="myimg2"></div>
+    <div> <img src="{% static '/images/fac8.jpg' %}" alt="" class="myimg2"></div>
+    <div> <img src="{% static '/images/fac9.jpg' %}" alt="" class="myimg2"></div>
+    <div> <img src="{% static '/images/fac10.jpg' %}" alt="" class="myimg2"></div>
+    <div> <img src="{% static '/images/about4.jpg' %}" alt="" class="myimg2"></div>
+
+</div>
+
+   
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+.myh1{
+  color: navy;
+  text-align: center;
+  font-family: serif;
+  
+  
+}
+
+ .myp{
+  font-weight: bold;
+  font-size: large;
+  color: rgb(11, 7, 14);
+  line-height: 30px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .img{
+      width: 50%;
+      float: left;
+            
+    }
+  
+    
+    .myimg1{
+      width: 40%;
+      height: 40%;
+      margin-top: 15px;
+      float: left;
+      padding: 10px;
+      margin:30px;
+      padding-bottom: 15px;
+       margin-bottom: 80px;
+    }
+   
+ 
+  </style>
+</head>
+
+<body>
+  
+  {% extends 'base.html'%}
+{% block title%}About{% endblock %}
+{% load static%}
+{% block content%}
+<h1 class="myh1">WHISPERING KERA</h1>
+<p class="myp">WHISPERING KERA is a stylish Guest House with spacious and comfortable rooms, surrounded by the greenery of the Poovar Backwaters. You can feel and hear a pleasant breeze coming off the nearby ocean. A large garden welcomes you as you enter the grounds and a swimming pool will refresh you any time of the day.
+  Set back from the road and traffic, WHISPERING KERA stands in lush, green surroundings that connect you directly to wildlife and birds. It stands on a plot with no less than forty coconut trees (Keram in Malayalam) but also all kinds of fruit trees and a vegetable garden.
+  We make your comfort our priority with high quality accommodation and food, space and intimacy to suit your needs and individual advice and support for your day-trips and visits.
+  With deep concern for the environemental issues that worry our planet today and seeking to respect nature, we make every effort to ensure that the ecological footprint of our activities and yours is as neutral as possible.
+  The Guest House is co-managed by Sylvaine Perret-Gentil, a European woman from Switzerland and by Paulose A. Netto, an Indian citizen from Kerala.
+  We look forward to your visit and will answer any question prior to your stay.mes in solace.
+    </p>
+    <div> <img src="{% static '/images/about4.jpg' %}" alt="" class="myimg1"></div>
+    <div> <img src="{% static '/images/about2.jpg' %}" alt="" class="myimg1"></div>
+    
+
+{% endblock %}
+</body>
+</html>
+
+
+

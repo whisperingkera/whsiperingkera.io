@@ -1,0 +1,138 @@
+{% extends 'base.html'%}
+{% block title%}Tariff{% endblock %}
+{% load static%}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myspan{
+            color:rgb(118, 5, 118) ;
+            font-weight: bold;
+            font-style: oblique;
+        }
+        .img{
+      width: 50%;
+      float: left;
+            
+    }
+  
+    
+    .myimg{
+      width: 20%;
+      height: 20%;
+      margin-top: 15px;
+      float: left;
+      padding: 10px;
+      margin:50px;
+      padding-bottom: 15px;
+      margin-left: 50px;
+    }
+    .myimg1{
+        width: 30%;
+      height: 50%;
+      margin-top: 15px;
+      float: left;
+      padding: 10px;
+      margin:30px;
+      padding-bottom: 15px;
+     margin-left: 50px;
+     margin-bottom: 80px;
+     
+    }
+
+    .myimg2{
+        width: 30%;
+      height: 50%;
+      margin-top: 15px;
+      float: left;
+    
+      margin:30px;
+      
+     margin-left: 50px;
+   
+     
+    }
+    .myp{
+  font-weight: bold;
+  font-size: large;
+  color: rgb(11, 7, 14);
+  line-height: 30px;
+  font-family:'Trebuchet MS';
+  margin-left: 25px;
+  padding: 10px;
+  padding-left: 40px;
+
+ 
+ }
+ .myp1{
+  font-weight: bold;
+  font-size: large;
+  color: rgb(11, 7, 14);
+  line-height: 30px;
+  font-family:'Segoe UI',;
+  margin-left: 25px;
+  padding: 10px;
+  padding-left: 40px;
+ }
+ .span2{
+    color:rgb(5, 112, 212);
+    font-style: italic;
+    font-weight: bold;
+ }
+ .myh1{
+    text-align: center;
+    color: indigo;
+   font-family: monospace;
+   padding-top: 10px;
+ }
+
+
+   
+    </style>
+</head>
+<body>
+    <h1 class="myh1">SIGHT-SEEING TOURS</h1>
+    <p class="myp">Around the Guest house : the Poovar backwaters and the Golden beach ; 
+        Vizhinjam fishing port and fish auction; <br> market gardening around Lake Vellayani; 
+        the Aswathy Handlooms spinning workshop in Kuzhivila (Kottukal); <br> the <span class="myspan"> Botanical Garden of Kuzipallam</span>; 
+        Kovalam, its lighthouse, 
+        shops and restaurants ; 
+        and of course swimming <br> and sunbathing at Manaltheeram beach.
+        </p>
+        <p class="myp1"><span class="myspan">Kânyâkumârî</span> or Cape Comorin (Tamil Nadu), the southern tip of India, is two hours away. 
+            This is where the Arabian Sea <br> meets the Bengal Sea and both  joigning the Laccadive Sea or Indian Ocean to the south. 
+            A highly symbolic place for <br> Mahatma Gandhi, it was here that his ashes were scattered. 
+            A magnificent mausoleum now pays tribute to his memory. <br>
+             On the rock in front of the cape, another mausoleum pays tribute to Swami Vivekananda,  a disciple of Ramakrishna, <br>
+              famous for his commitment to teaching Hindu philosophy at an international level.</p>
+
+    <p class="myp">Also nearby, on the way to south cape, <span class="myspan">Padmanabhapuram Palace</span> in Thuckalay (Tamil Nadu) and <br>
+       <span class="myspan"> Thanumalayan Temple </span>in Suchindran (Tamil Nadu) are must-see tours.</p>
+
+        <p class="myp1">The capital <span class="span2">Trivandrum (Thiruvananthapuram) </span>also offers some interesting sights like the <span class="myspan">Sree Padmabhaswamy Temple</span> and  <br><span class="span2">Chalai Market</span>.
+            It is the opportunity to discover the atmosphere of a large Indian city without suffering too much the trials of <br> excessive pollution.</p>
+
+    <p class="myp">A 5-hour train ride to the North (also possible to fly), the city of <span class="span2">Kochi</span> (Cochin for Francophones) <br>
+        is a historical marvel that can be visited easily as a two or three-day getaway.</p>
+
+
+        <div> <img src="{% static '/images/temple.jpg' %}" alt="" class="myimg"></div>
+        <div> <img src="{% static '/images/temp.jpg' %}" alt="" class="myimg"></div>
+        <div> <img src="{% static '/images/fm.jpg' %}" alt="" class="myimg2"></div>
+        <div> <img src="{% static '/images/river.jpg' %}" alt="" class="myimg1"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}
